@@ -1,3 +1,13 @@
+//prompt for pass length (8-128)
+var lowerChar = ['abcdefghijklmnopqrstuvwxyz'];
+var upperChar =['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+var numericChar = ['0123456789'];
+var specialChar = ['~`!@#$%^&*()-_+={}[]|/;:<>?.'];
+
+
+
+
+
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
