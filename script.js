@@ -1,12 +1,12 @@
 //prompt for pass length (8-128)
-var lowerChar = ['abcdefghijklmnopqrstuvwxyz'];
-var upperChar = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
-var numericChar = ['0123456789'];
-var specialChar = ['~!@#$%^&*()-_+={}[]|/;:<>?.'];
+var lowerChar = 'abcdefghijklmnopqrstuvwxyz';
+var upperChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var numericChar = '0123456789';
+var specialChar = '~!@#$%^&*()-_+={}[]|/;:<>?.';
 
-var password = [""];
-var passLength = [""];
-var passContains = [""];
+var password = "";
+var passLength = 0;
+var passContains = "";
 
 // linked to button ID in HTML
 var generateBtn = document.querySelector("#generate");
@@ -54,15 +54,16 @@ function generatePassword() {
     alert("Please select at least one criteria for password characters");
     return;
   }
-  console.log(passContains);
+  console.log(passContains); //string of all possible chars
 
   for(var i = 0; i < passLength; i++) {
-    var randChars = Math.floor(Math.random() * passContains.passLength)
-    password= password.concat(passContains[randChars]);
+    var randChars = Math.floor(Math.random() * passContains.length)
+    password = password.concat(passContains[randChars]);
   }
   console.log(password);
   return password;
 };
+console.log(length);
 
 
 
