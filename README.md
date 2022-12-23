@@ -1,18 +1,62 @@
-# challenge-password-generator
+
+# Secure Password Generator
+
+[Password Generator](https://overtonr.github.io/challenge-password-generator/)
+
+![Landing Pass](./images/land.png)
+
+## Description
+Using Javascript functions, this application generates a unique password for users to create depending on the criteria of included characters they select. There are many ways to randomize a password by selecting the number of characters, and if the password contains lowercase characters, uppercase characters, numbers, and special characters. Play around with this application and find the random secure password just for you!
+
+<br>
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+<br>
+
+## Table of Contents
+- [Usage](#usage)
+- [License](#license)
+- [Questions](#questions)
+
+<br>
+
+
+## Usage
+Navigate to the [deployed link](https://overtonr.github.io/challenge-password-generator/) and follow the instructions. Make sure to enter a valid number of characters or the application will alert you with an error:
+![Invalid length](./images/length-err.png)
+
+
+```js
+passLength = prompt('How long is your desired password length? please enter a number between 8 and 128.')
+  if (passLength < 8 || passLength > 128) {
+    alert('Password must be in between 8 and 128 characters long. Please try again');
+    return;
+  };
 ```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
+
+Also make sure to select at least one of the criteria for required character to generate a password:
+
+![Invalid selectio](./images//char-err.png)
+
+
+```js
+if (!hasLower && !hasUpper && !hasNum && !hasSpecial){
+    alert("Please select at least one criteria for password characters");
+    return;
+  }
 ```
+
+Click the button when finished to generate another random password.
+
+
+
+<br>
+
+## License
+This application is covered under the MIT License
+
+<br>
+
+## Questions
+https://github.com/overtonr
