@@ -24,6 +24,8 @@ Using Javascript functions, this application generates a unique password for use
 
 ## Usage
 Navigate to the [deployed link](https://overtonr.github.io/challenge-password-generator/) and follow the instructions. Make sure to enter a valid number of characters or the application will alert you with an error:
+<br>
+
 ![Invalid length](./images/length-err.png)
 
 
@@ -36,6 +38,8 @@ passLength = prompt('How long is your desired password length? please enter a nu
 ```
 
 Also make sure to select at least one of the criteria for required character to generate a password:
+
+<br>
 
 ![Invalid selectio](./images//char-err.png)
 
