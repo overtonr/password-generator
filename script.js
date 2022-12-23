@@ -4,9 +4,9 @@ var upperChar = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
 var numericChar = ['0123456789'];
 var specialChar = ['~!@#$%^&*()-_+={}[]|/;:<>?.'];
 
-var finalPass = [];
-var passLength = [];
-var passContains = [];
+var password = [""];
+var passLength = [""];
+var passContains = [""];
 
 // linked to button ID in HTML
 var generateBtn = document.querySelector("#generate");
@@ -27,7 +27,7 @@ function generatePassword() {
   if (passLength < 8 || passLength > 128) {
     alert('Password must be in between 8 and 128 characters long. Please try again');
   //refreshes page to restart prompting
-  window.location.reload();
+    return;
   };
   //execution for lower
     var hasLower = confirm('Do you want your password to contain lower case letters? OK if yes, cancel if not.');
@@ -50,11 +50,18 @@ function generatePassword() {
   if (hasSpecial){
     passContains += specialChar;
   }
-  if (!hasLower && !hasUpper && !hasNum && !hasSpecial){
+  if (!hasLower && !hasUpper && !hasNum && !hasSpecial){ //alert for incorrect selection
     alert("Please select at least one criteria for password characters");
     return;
   }
   console.log(passContains);
+
+  for(var i = 0; i < passLength; i++) {
+    var randChars = Math.floor(Math.random() * passContains.passLength)
+    password= password.concat(passContains[randChars]);
+  }
+  console.log(password);
+  return password;
 };
 
 
