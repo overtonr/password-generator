@@ -1,7 +1,7 @@
 
 # Secure Password Generator
 
-[Password Generator](https://overtonr.github.io/challenge-password-generator/)
+[Password Generator](https://overtonr.github.io/password-generator/)
 
 ![Landing Pass](./images/land.png)
 
