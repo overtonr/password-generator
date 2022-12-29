@@ -10,8 +10,7 @@ var passContains = "";
 
 // linked to button ID in HTML
 var generateBtn = document.querySelector("#generate");
-// Add event listener to generate button: calls function
-generateBtn.addEventListener("click", writePassword);
+
 
 // Write password to the #password input
 function writePassword() {
@@ -68,5 +67,7 @@ console.log(length);
 
 
 
-writePassword();
+// writePassword();
+// Add event listener to generate button: calls function
+generateBtn.addEventListener("click", writePassword);
 
